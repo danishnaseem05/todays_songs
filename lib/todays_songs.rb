@@ -1,6 +1,2 @@
-require "todays_songs/version"
-
-module TodaysSongs
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "./todays_songs/version.rb"
+require_relative "./todays_songs/cli_environment.rb"

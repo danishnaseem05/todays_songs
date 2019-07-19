@@ -5,11 +5,10 @@ require "todays_songs/version"
 Gem::Specification.new do |spec|
   spec.name          = "todays_songs"
   spec.version       = TodaysSongs::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
+  spec.authors       = ["Danish Naseem"]
+  spec.email         = ["danishnaseem05@gmail.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Uses nokogiri to scrape song data from two different websites, makes songs, displays them to the user, and asks which one they'd want to hear, which then open the song's webpage.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 
