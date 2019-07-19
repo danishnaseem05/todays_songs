@@ -27,7 +27,8 @@ CLI:
 - the CLI file is bin/today's_songs
 
 CLI Environment class:
-- #greets: the user; tells them about the program, and the controls of how to see all of today's songs, and typing exit anytime would exit the program.
+- #greets: the user; tells them about the program, and the controls of how to see all of today's songs, and typing exit anytime
+  would exit the program.
 - #run: heart of the entire program. calls #greets, then runs in a loop, and exits if user inputs exit, which then it calls #goodbye. Inside the loop, calls #create_songs, according to the user inputs
 - #goodbye:  prints goodbye message, then exits out of the program
 - #creates_songs: uses the upper two mentioned links, passes them to the Scrapper class, then gets a list of hashes in return, passes list of hashes to the song class, which iterates and creates song instances through them and storing all the instances within the class
@@ -53,12 +54,10 @@ Web Accessor Class:
 - #initialize - takes in a url, and stores it in a instance variable @url, that can be accessed through an attribute reader.
 - #display_page - calls @url variable using its attribute reader, then opens the web page using that url
 
-
 Song class:
 - @@all class array keeps track of all the songs it creates, by saving all instances as the class initializes.
 - #initialize: initializes with name, and optional artist set to nil by default. calls #artist= on that artist.
 - #artist= :takes in a artist, and sets it to @artist = artist, if not already set, then calls that artist's #add_songs method. 
-
 
 Artist Class:
 - @@all class array keeps track of all the artists it creates, by saving all instances as the class initializes.
