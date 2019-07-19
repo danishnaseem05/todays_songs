@@ -1,6 +1,9 @@
+require 'pry'
 class TodaysSongs::WebAccessor
 
 	@@all = []
+
+	attr_reader :url
 
 	def initialize(url)
 		@url = url
@@ -9,6 +12,9 @@ class TodaysSongs::WebAccessor
 
 	def self.all
 		@@all
+	end
+
+	def display_page
 	end
 
 
