@@ -34,13 +34,13 @@ CLI Environment class:
 - #creates_songs: uses the upper two mentioned links, passes them to the Scrapper class, then gets a list of hashes in return, passes list of hashes to the song class, which iterates and creates song instances through them and storing all the instances within the class
 - list songs; shows them a list of songs in using the #list_songs method in the song class, which returns an array, then pass the array to the #display_songs in CLI Environment class, which displays the songs as following
 	
-	# 1. [Song_name] - by [Artist_name]
-	# 2. [Song_name] - by [Artist_name]
-	# 3. [Song_name] - by [Artist_name]
-		-
-		-
-		-
-		etc
+1. [Song_name] - by [Artist_name]
+2. [Song_name] - by [Artist_name]
+3. [Song_name] - by [Artist_name]
+	       -
+	       -
+	       -
+	      etc
 
 - ask which song they'd like to hear, and to enter their response as a number
 - accept and convert their response to an int.
