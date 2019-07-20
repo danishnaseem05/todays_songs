@@ -23,7 +23,7 @@ from following links:
 - <https://www.jazziz.com/category/song-of-the-day/>
 - <https://www.randomlists.com/random-songs>
 
-program starts when user types in ./bin/today's_songs in the terminal [for now]
+program starts when user types in ./bin/todays_songs in the terminal [for now]
 
 ## CLI
 
