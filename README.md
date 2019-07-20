@@ -1,6 +1,6 @@
 # TodaysSongs
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the directory `lib/todays_songs/` and add the `require_relative "[path]"` to file `lib/todays_songs`. To experiment with that code, run `bin/todays_songs` for an interactive prompt.
+Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the directory `lib/todays_songs/` and add the `require_relative "[path]"` to file `lib/todays_songs.rb`. To experiment with that code, declare an instance of that code to file `bin/todays_songs` and run `./bin/todays_songs` in the terminal for an interactive prompt.
 
 ## Installation
 
