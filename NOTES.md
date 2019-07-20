@@ -1,9 +1,11 @@
 # Usage
 
-***Title:** Today's Songs* <br />
-***Author:** Danish Naseem* <br />
-***Language:** Ruby* <br />
-***Version:** 0.1.0*
+---
+*Title: Today's Songs*
+*Author: Danish Naseem*
+*Language: Ruby*
+*Version: 0.1.0*
+---
 
 - Start with the User Interactive Environment
 - `./bin/todays_songs`: Runs the program
