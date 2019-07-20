@@ -36,10 +36,9 @@ CLI Environment class:
 1. [Song_name] - by [Artist_name]
 2. [Song_name] - by [Artist_name]
 3. [Song_name] - by [Artist_name]
-	       -
-	       -
-	       -
-	      etc
+.
+.
+.
 
 - ask which song they'd like to hear, and to enter their response as a number
 - #play: accepts and converts their response to an int.
