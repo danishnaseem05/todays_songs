@@ -58,13 +58,13 @@ program starts when user types in `./bin/todays_songs` in the terminal [*for now
 
 ## Web Accessor Class
 
-- @@all class array keeps track of all the links it opened by saving all instances as the class initializes.
+- `@@all` class array keeps track of all the links it opened by saving all instances as the class initializes.
 - `#initialize`: takes in a url, and stores it in a instance variable @url, that can be accessed through an attribute reader.
 - `#display_page`: calls @url variable using its attribute reader, then opens the web page using that url
 
 ## Song Class
 
-- @@all class array keeps track of all the songs it creates, by saving all instances as the class initializes.
+- `@@all` class array keeps track of all the songs it creates, by saving all instances as the class initializes.
 - `.list_songs`: return @@all array containing all of song class's instances.
 - `.create_from_array`: takes in array of hashes, iterates through it, and makes new song instance for each hash by calling #initialize on song class as by simply doing Module::Song.new(name, artist, url).
 - `#initialize`: iterates through them, and uses #send method to initialize new instance with name, optional artist set to nil by default, and url Calls #artist= on that artist.
@@ -74,4 +74,4 @@ program starts when user types in `./bin/todays_songs` in the terminal [*for now
 
 ## Scraper Class
 
-- TODO: *add some methods*
+- `TODO`: *add some methods*
