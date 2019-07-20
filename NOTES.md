@@ -64,8 +64,3 @@ Song class:
 - #artist= :takes in a artist, and sets it to @artist = artist, if not already set, then calls that artist's #add_songs method.
 - #save: adds each instance to @@all array
 - .reset_list_songs: resets @@all array to empty
-  
-Artist Class:
-- @@all class array keeps track of all the artists it creates, by saving all instances as the class initializes.
-- #initialize: initalilizes with empty @songs array, #name
-- #add_songs: adds songs to the @songs array using its attribute accessor, if the song is not already present, and sets that song's artist to self, if that song's artist is nil.

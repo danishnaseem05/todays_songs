@@ -1,5 +1,0 @@
-class TodaysSongs::Artist
-
-    
-
-end
