@@ -17,14 +17,17 @@ class TodaysSongs::CLIEnvironment
 
 	def menu
 		input = nil
-		while input!= 'exit' || input!= 'no'
+		while input!= 'exit'
 			input = self.song_selection?
 			if input == "list songs"
 				self.display_songs 
 			elsif input == 'exit'
 				break
 			else 
-				input = self.play(input)
+				condition = self.play(input)
+				if condition == "no" || condition == "n"
+					break
+				end
 			end
 		end
 	end
@@ -78,10 +81,10 @@ class TodaysSongs::CLIEnvironment
 		
 		# The array is just a test - The real array will come from the Scraper class
 		songs  = [
-			{:name => "Song 1", :artist => "Artist 1", :url => "http://google.com"},
-			{:name => "Song 2", :artist => "Artist 2", :url => "http://facebook.com"},
-			{:name => "Song 3", :artist => "Artist 3", :url => "http://song3.com"},
-			{:name => "Song 4", :artist => "Artist 4", :url => "http://song4.com"},
+			{:name => "Song 1", :artist => "Artist 1", :url => "http://youtube.com"},
+			{:name => "Song 2", :artist => "Artist 2", :url => "https://www.thecurrent.org/collection/song-of-the-day"},
+			{:name => "Song 3", :artist => "Artist 3", :url => "https://www.jazziz.com/category/song-of-the-day/"},
+			{:name => "Song 4", :artist => "Artist 4", :url => "https://www.randomlists.com/random-songs"},
 		]
 
 		# passing list of hashes to the song class to initialize a new instance for each hash
