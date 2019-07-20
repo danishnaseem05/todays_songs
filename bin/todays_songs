@@ -2,4 +2,6 @@
 
 require "./lib/todays_songs"
 
-TodaysSongs::CLIEnvironment.new.run
+web_accessor = TodaysSongs::WebAccessor.new("http://google.com/")
+web_accessor.display_page
+#TodaysSongs::CLIEnvironment.new.run

@@ -1,4 +1,7 @@
 require 'pry'
+require 'selenium-webdriver'
+require 'chromedriver-helper'
+
 class TodaysSongs::WebAccessor
 
 	@@all = []
@@ -15,7 +18,11 @@ class TodaysSongs::WebAccessor
 	end
 
 	def display_page
+		Selenium::WebDriver::Chrome::Service.driver_path=("/mnt/d/danis/Documents/PERSONAL PROJECTS/todays_songs/bin/chromedriver.exe")
+		driver  = Selenium::WebDriver.for :chrome
+		driver.get "#{self.url}"
 	end
 
 
 end
+
