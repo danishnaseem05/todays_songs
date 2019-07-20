@@ -40,7 +40,7 @@ program starts when user types in `./bin/todays_songs` in the terminal [*for now
   passes them to the Scrapper class, then gets a list of hashes in return, passes list of hashes to the song class, which iterates and creates song instances through them and storing all the instances within the class. Then calls .list_songs class method from the song class, which returns an array of song instances.
 - `#display_songs`: calls #create_songs to get that array of song instances and displays each instances to the user as follows
 
-```
+```ruby
 1. [Song_name] - by [Artist_name]
 2. [Song_name] - by [Artist_name]
 3. [Song_name] - by [Artist_name]
