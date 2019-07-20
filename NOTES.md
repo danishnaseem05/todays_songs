@@ -1,3 +1,5 @@
+# Usage
+
 ***Title:** Today's Songs* <br />
 ***Author:** Danish Naseem* <br />
 ***Language:** Ruby* <br />
@@ -20,12 +22,12 @@ from follwoing links:
 
 program starts when user types in today's_songs
 
-CLI:
+## CLI
 
 - calls CLI Environment class
 - the CLI file is bin/today's_songs
 
-CLI Environment class:
+## CLI Environment class
 
 - `#greets`: the user; tells them about the program, and the controls of how to see all of today's songs, and typing exit anytime
   would exit the program.
@@ -51,13 +53,13 @@ CLI Environment class:
 - if yes, list the songs again, and ask which one
 - if no, ask to exit enter exit then run #goodbye
 
-Web Accessor Class:
+## Web Accessor Class
 
 - @@all class array keeps track of all the links it opened by saving all instances as the class initializes.
 - `#initialize`: takes in a url, and stores it in a instance variable @url, that can be accessed through an attribute reader.
 - `#display_page`: calls @url variable using its attribute reader, then opens the web page using that url
 
-Song class:
+## Song Class
 
 - @@all class array keeps track of all the songs it creates, by saving all instances as the class initializes.
 - `.list_songs`: return @@all array containing all of song class's instances.
@@ -66,3 +68,7 @@ Song class:
 - `#artist=`: takes in a artist, and sets it to @artist = artist, if not already set, then calls that artist's #add_songs method.
 - `#save`: adds each instance to @@all array
 - `.reset_list_songs`: resets @@all array to empty
+
+## Scraper Class
+
+- TODO: *add some methods*
