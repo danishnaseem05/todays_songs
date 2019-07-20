@@ -57,7 +57,7 @@ Web Accessor Class:
 
 Song class:
 - @@all class array keeps track of all the songs it creates, by saving all instances as the class initializes.
-- #initialize: initializes with name, and optional artist set to nil by default. calls #artist= on that artist.
+- #initialize: takes in hashes, iterates through them, and uses #send method to initialize new instance with name, and optional artist set to nil by default. calls #artist= on that artist.
 - #artist= :takes in a artist, and sets it to @artist = artist, if not already set, then calls that artist's #add_songs method.
   
 Artist Class:
