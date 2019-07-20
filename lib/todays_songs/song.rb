@@ -30,7 +30,7 @@ class TodaysSongs::Song
         @@all
     end
 
-    def artist=(artist_name)
+    def artist=(artist)
         if self.artist!=artist
             @artist = artist
         end

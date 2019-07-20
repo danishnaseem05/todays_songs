@@ -24,7 +24,7 @@ class TodaysSongs::CLIEnvironment
 			elsif input == 'exit'
 				break
 			else 
-				self.play(input)
+				input = self.play(input)
 			end
 		end
 	end
@@ -44,7 +44,7 @@ class TodaysSongs::CLIEnvironment
 		puts "Any other song, you want to listen to? (yes or no)"
 		input = gets.strip.downcase
 		if input == "yes" || input == "y" || input == "no" || input == "n"
-			return
+			return input
 		else
 			self.incorrect_value
 			self.play_more?
