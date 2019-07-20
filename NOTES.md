@@ -4,14 +4,11 @@
 ***Version:** 0.1.0*
 
 - Start with the User Interactive Environment
-- CLI portion in the bin directory
-- Number of Classes
-- A Scraper Class
-- Song class
-- Artist class
-- Web Accessor Class
-- A CLI Environment Class
-- Tests for each class in spec directory
+- CLI portion in the bin directory: Runs the program
+- CLI Environment Class: User Interface Controller
+- Scraper Class: Scrapes html elements from links and 	returns them in a json format datatype
+- Song class: creates song objects from json format datatype
+- Web Accessor Class: opens webpage from given url
 
 
 Project's about Songs of the Day
