@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-See NOTES.md
+See `NOTES.md`
 
 ## Development
 
