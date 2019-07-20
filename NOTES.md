@@ -10,7 +10,6 @@
 - `Song Class`: creates song objects from json format datatype
 - `Web Accessor Class`: opens webpage from given url
 
-
 Project's about Songs of the Day
 
 from follwoing links:
