@@ -63,9 +63,9 @@ class TodaysSongs::CLIEnvironment
 		count = 0
 		songs.each do |song|
 			count +=1
-			binding.pry
+			#binding.pry
 			puts "#{count}. #{song.name} - by #{song.artist}"
-			binding.pry
+			#binding.pry
 		end
 	end
 

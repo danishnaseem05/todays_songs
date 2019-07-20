@@ -19,9 +19,8 @@ require 'pry'
 #     {:name => "Song 4", :artist => "Artist 4", :url => "http://song4.com"},
 # ]
 
-TodaysSongs::Song.create_from_array(songs)
-arr = TodaysSongs::Song.list_songs
-binding.pry
+#TodaysSongs::Song.create_from_array(songs)
+#arr = TodaysSongs::Song.list_songs
 
 ## Scraper Class ##
 
@@ -36,6 +35,6 @@ binding.pry
 
 #################### MAIN CALLER ####################
 
-#TodaysSongs::CLIEnvironment.new.run
+TodaysSongs::CLIEnvironment.new.run
 
 #################################################
