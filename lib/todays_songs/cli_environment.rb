@@ -56,7 +56,7 @@ class TodaysSongs::CLIEnvironment
 
 	def goodbye
 		puts "\n"
-		puts "Hope you have a wonderful day. Bye!"
+		puts "See you again tomorrow. Bye!"
 		puts "\n"
 	end
 
