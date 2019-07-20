@@ -22,6 +22,10 @@ class TodaysSongs::Song
         self.class.list_songs << self
     end
 
+    def self.reset_list_songs
+        self.list_songs.clear
+    end
+
     def self.list_songs
         @@all
     end

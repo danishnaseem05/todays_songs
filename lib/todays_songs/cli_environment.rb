@@ -59,14 +59,12 @@ class TodaysSongs::CLIEnvironment
 
 	def display_songs
 		puts "\n"
-		self.songs = self.create_songs
 		count = 0
 		songs.each do |song|
 			count +=1
-			#binding.pry
 			puts "#{count}. #{song.name} - by #{song.artist}"
-			#binding.pry
 		end
+		#TodaysSongs::Song.reset_list_songs
 	end
 
 	def create_songs
@@ -77,8 +75,8 @@ class TodaysSongs::CLIEnvironment
 		
 		# The array is just a test - The real array will come from the Scraper class
 		songs  = [
-			{:name => "Song 1", :artist => "Artist 1", :url => "http://song1.com"},
-			{:name => "Song 2", :artist => "Artist 2", :url => "http://song2.com"},
+			{:name => "Song 1", :artist => "Artist 1", :url => "http://google.com"},
+			{:name => "Song 2", :artist => "Artist 2", :url => "http://facebook.com"},
 			{:name => "Song 3", :artist => "Artist 3", :url => "http://song3.com"},
 			{:name => "Song 4", :artist => "Artist 4", :url => "http://song4.com"},
 		]
@@ -98,7 +96,10 @@ class TodaysSongs::CLIEnvironment
 	def play(input)
 		index = input_to_index(input)
 		if valid_value?(index)
-			puts "Playing #{songs[index]}!"
+			 url = self.songs[index].url
+			 web_accessor = TodaysSongs::WebAccessor.new(url)
+			 web_accessor.display_page
+			#puts "Playing #{self.songs[index].name} - by #{self.songs[index].artist}!"
 			self.play_more?
 		else
 			self.incorrect_value
