@@ -6,7 +6,7 @@
 - Start with the User Interactive Environment
 - CLI portion in the bin directory: Runs the program
 - CLI Environment Class: User Interface Controller
-- Scraper Class: Scrapes html elements from links and 	returns them in a json format datatype
+- Scraper Class: Scrapes html elements from links and returns them in a json format datatype
 - Song class: creates song objects from json format datatype
 - Web Accessor Class: opens webpage from given url
 
