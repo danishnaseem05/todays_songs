@@ -68,6 +68,11 @@ class TodaysSongs::CLIEnvironment
 	end
 
 	def create_songs
+		# - https://www.thecurrent.org/collection/song-of-the-day
+		# - https://songoftheday.co/
+		# passes above two links to Scrapper class, gets a list of hashes in return
+		# passes list of hashes to the song class to initialize a new instance for each hash
+		# calls .list_songs
 		["song 1", "song 2", "song 3", "song 4", "song 5"]
 		# the above is just a test
 		# initiate songs from song class
