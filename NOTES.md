@@ -14,9 +14,9 @@
 Project's about Songs of the Day
 
 from follwoing links:
-- https://www.thecurrent.org/collection/song-of-the-day
-- https://www.jazziz.com/category/song-of-the-day/
-- https://www.randomlists.com/random-songs
+- <https://www.thecurrent.org/collection/song-of-the-day>
+- <https://www.jazziz.com/category/song-of-the-day/>
+- <https://www.randomlists.com/random-songs>
 
 program starts when user types in today's_songs
 
