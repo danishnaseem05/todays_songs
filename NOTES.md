@@ -32,7 +32,7 @@ CLI Environment class:
 - #run: heart of the entire program. calls #greets, then runs in a loop, and exits if user inputs exit, which then it calls #goodbye. Inside the loop, calls #create_songs, according to the user inputs
 - #goodbye:  prints goodbye message, then exits out of the program
 - #create_songs: uses the upper two mentioned links,
-  passes them to the Scrapper class, then gets a list of hashes in return, passes list of hashes to the song class, which iterates and creates song instances through them and storing all the instances within the class. Then calls .list_songs method from the song class, which returns an array of song instances.
+  passes them to the Scrapper class, then gets a list of hashes in return, passes list of hashes to the song class, which iterates and creates song instances through them and storing all the instances within the class. Then calls .list_songs class method from the song class, which returns an array of song instances.
 - #display_songs; calls #create_songs to get that array of song instances and displays each instances to the user as follows
 
 1. [Song_name] - by [Artist_name]
