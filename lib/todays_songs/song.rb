@@ -1,29 +1,35 @@
-require 'pry'
 class TodaysSongs::Song
 
     @@all = []
-    attr_reader name, artist, url
+    attr_accessor :name, :url
+    attr_reader :artist
 
-    def initialize(name, artist=nil, url)
-        @name = name
-        self.artist = artist
-        @url = url
-
-        self.class.all << self
+    def initialize(song_hash)
+        song_hash.each do |key, value|
+            self.send("#{key}=", value)
+        end
+     
+       self.save
     end
 
-    def self.create_from_array(array)
-
+    def self.create_from_array(songs)
+        songs.each do |song_hash|
+            song = TodaysSongs::Song.new(song_hash)
+        end
     end
 
-    def self.all
+    def save
+        self.class.list_songs << self
+    end
+
+    def self.list_songs
         @@all
     end
 
     def artist=(artist)
         if self.artist!=artist
             @artist = artist
-            artist.add_songs
+            #artist.add_songs
         end
     end
 

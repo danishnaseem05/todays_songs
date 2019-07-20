@@ -63,19 +63,31 @@ class TodaysSongs::CLIEnvironment
 		count = 0
 		songs.each do |song|
 			count +=1
-			puts "#{count}. #{song}"
+			binding.pry
+			puts "#{count}. #{song.name} - by #{song.artist}"
+			binding.pry
 		end
 	end
 
 	def create_songs
 		# - https://www.thecurrent.org/collection/song-of-the-day
 		# - https://songoftheday.co/
-		# passes above two links to Scrapper class, gets a list of hashes in return
-		# passes list of hashes to the song class to initialize a new instance for each hash
-		# calls .list_songs song class method
-		["song 1", "song 2", "song 3", "song 4", "song 5"]
-		# the above is just a test
-		# initiate songs from song class
+		# passes above two links to Scraper class, gets a list of hashes in return
+		# The above is unfinished as Scraper class has not yet been built
+		
+		# The array is just a test - The real array will come from the Scraper class
+		songs  = [
+			{:name => "Song 1", :artist => "Artist 1", :url => "http://song1.com"},
+			{:name => "Song 2", :artist => "Artist 2", :url => "http://song2.com"},
+			{:name => "Song 3", :artist => "Artist 3", :url => "http://song3.com"},
+			{:name => "Song 4", :artist => "Artist 4", :url => "http://song4.com"},
+		]
+
+		# passing list of hashes to the song class to initialize a new instance for each hash
+		TodaysSongs::Song.create_from_array(songs)
+		# getting all song instances
+		TodaysSongs::Song.list_songs
+		
 	end
 
 	def input_to_index(input)

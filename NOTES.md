@@ -57,6 +57,7 @@ Web Accessor Class:
 
 Song class:
 - @@all class array keeps track of all the songs it creates, by saving all instances as the class initializes.
+- .list_songs: return @@all array containing all of song class's instances.
 - .create_from_array: takes in array of hashes, iterates through it, and makes new song instance for each hash by calling #initialize on song class as by simply doing Module::Song.new(name, artist, url).
 - #initialize: iterates through them, and uses #send method to initialize new instance with name, optional artist set to nil by default, and url Calls #artist= on that artist.
 - #artist= :takes in a artist, and sets it to @artist = artist, if not already set, then calls that artist's #add_songs method.

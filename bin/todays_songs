@@ -3,7 +3,7 @@
 require "./lib/todays_songs"
 
 #################### TESTING ####################
-
+require 'pry'
 ## WebAcessor Class ##
 
 #web_accessor = TodaysSongs::WebAccessor.new("http://google.com/")
@@ -12,16 +12,16 @@ require "./lib/todays_songs"
 
 ## Song Class ##
 
-# arr  = [
+# songs  = [
 #     {:name => "Song 1", :artist => "Artist 1", :url => "http://song1.com"},
 #     {:name => "Song 2", :artist => "Artist 2", :url => "http://song2.com"},
 #     {:name => "Song 3", :artist => "Artist 3", :url => "http://song3.com"},
 #     {:name => "Song 4", :artist => "Artist 4", :url => "http://song4.com"},
 # ]
 
-#Song.create_from_array(arr)
-#puts Song.all
-
+TodaysSongs::Song.create_from_array(songs)
+arr = TodaysSongs::Song.list_songs
+binding.pry
 
 ## Scraper Class ##
 
