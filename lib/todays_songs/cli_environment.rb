@@ -68,9 +68,12 @@ class TodaysSongs::CLIEnvironment
 	end
 
 	def create_songs
+
 		# - https://www.thecurrent.org/collection/song-of-the-day
-		# - https://songoftheday.co/
-		# passes above two links to Scraper class, gets a list of hashes in return
+		# - https://www.jazziz.com/category/song-of-the-day/
+		# - https://www.randomlists.com/random-songs
+		
+		# passes above links to Scraper class, gets a list of hashes in return
 		# The above is unfinished as Scraper class has not yet been built
 		
 		# The array is just a test - The real array will come from the Scraper class
