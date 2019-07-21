@@ -27,8 +27,7 @@ class TodaysSongs::Scraper
             result << {
             :name => song.text.split(" - ")[1],
             :artist => song.text.split(" - ")[0],
-            :url => song.attribute("href").value}
-            binding.pry
+            :url => "https://www.thecurrent.org" + song.attribute("href").value}
         end
         self.save(result)       
     end
