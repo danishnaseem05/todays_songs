@@ -78,6 +78,6 @@ program starts when user types in `./bin/todays_songs` in the terminal [*for now
 - `.create_from_jazziz`: takes in the url: <https://www.jazziz.com/category/song-of-the-day/> returns json format datatype listing song names, artist names, and urls.
 - `.create_from_randomlists`: takes in the url: <https://www.randomlists.com/random-songs> returns json format datatype listing song names, artist names, and urls.
 - `@@all`: class array stores the json format datatype returned by the above three methods
-- `.all`: return the @@all array
-- `.save`: takes in the json format datatype and stores it in the @@all array using .all class method.
+- `.all`: returns the @@all array flatten.
+- `.save`: takes in the json format datatype and stores it in the @@all array.
   

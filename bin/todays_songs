@@ -4,11 +4,13 @@ require "./lib/todays_songs"
 
 #################### TESTING ####################
 require 'pry'
+
 ## WebAcessor Class ##
 
 #web_accessor = TodaysSongs::WebAccessor.new("http://google.com/")
 #web_accessor.display_page
 
+######################
 
 ## Song Class ##
 
@@ -22,19 +24,25 @@ require 'pry'
 #TodaysSongs::Song.create_from_array(songs)
 #arr = TodaysSongs::Song.list_songs
 
+################
+
 ## Scraper Class ##
 
+#url1 = "https://www.thecurrent.org/collection/song-of-the-day"
+url2 = "https://www.jazziz.com/category/song-of-the-day/"
+#url3 = "https://www.randomlists.com/random-songs"
+
+#TodaysSongs::Scraper.create_from_thecurrent(url1)
+TodaysSongs::Scraper.create_from_jazziz(url2)
+#TodaysSongs::Scraper.create_from_randomlists(url3)
+
+###################
+
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#
 
 
-## Artist Class ##
+################## MAIN CALLER ##################
 
+#TodaysSongs::CLIEnvironment.new.run
 
-
-#################################################
-
-
-#################### MAIN CALLER ####################
-
-TodaysSongs::CLIEnvironment.new.run
-
-#################################################
+#XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX#

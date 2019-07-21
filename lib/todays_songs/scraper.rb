@@ -6,33 +6,46 @@ class TodaysSongs::Scraper
     @@all = []
 
     def self.all
-        @@all
+        @@all.flatten
     end
 
     def self.save(json)
-        self.all << json
+        @@all << json
     end
 
     def self.create_from_thecurrent(url)
+        # songs: html.css("article.row h2 a")
+        # name: song.text.split(" - ")[1]
+        # artist: song.text.split(" - ")[0]
+        # url: song.attribute("href").value
+
         result = []
+        html = Nokogiri::HTML(open(url))
+        songs = html.css("article.row h2 a")
 
-        # TODO: write some code
-
-        self.save(result)        
+        songs.each do |song|
+            result << {
+            :name => song.text.split(" - ")[1],
+            :artist => song.text.split(" - ")[0],
+            :url => song.attribute("href").value}
+        end
+        self.save(result)    
+        binding.pry    
     end
 
     def self.create_from_jazziz(url)
         result = []
+        html = Nokogiri::HTML(open(url))
+        binding.pry
 
-        # TODO: write some code
 
         self.save(result)
     end
 
     def self.create_from_randomlists(url)
         result = []
+        html = Nokogiri::HTML(open(url))
 
-        # TODO: write some code
 
         self.save(result)
     end
