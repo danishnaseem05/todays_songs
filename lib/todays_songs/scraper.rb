@@ -46,17 +46,15 @@ class TodaysSongs::Scraper
         counter = 5
         while counter < 11 
             hash = self.name_and_artist(songs[counter].children.text.split(/[()-]/))
-            binding.pry
+
             url = "http://youtube.com" + songs[counter].children.css("a").attribute("href").value
 
             hash[:url] = url
 
             result << hash
             counter += 1
-            binding.pry
         end
         self.save(result)
-        binding.pry
     end
 
     def self.name_and_artist(array)
