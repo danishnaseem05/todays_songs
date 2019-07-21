@@ -71,11 +71,8 @@ class TodaysSongs::CLIEnvironment
 	end
 
 	def create_songs
-
-		# - https://www.thecurrent.org/collection/song-of-the-day/
-		# - https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbVBud2pLbmNhZUp3MDYzZlU1M3Q0cA%3D%3D
 		
-		# passes above links to Scraper class, gets a list of hashes in return
+		# passes links to Scraper class, get a list of hashes in return
 		
 		TodaysSongs::Scraper.create_from_thecurrent("https://www.thecurrent.org/collection/song-of-the-day/")
 
@@ -83,14 +80,6 @@ class TodaysSongs::CLIEnvironment
 
 		songs = TodaysSongs::Scraper.all
 		
-		# The array is just a test - The real array will come from the Scraper class
-		# songs  = [
-		# 	{:name => "Song 1", :artist => "Artist 1", :url => "http://youtube.com"},
-		# 	{:name => "Song 2", :artist => "Artist 2", :url => "https://www.thecurrent.org/collection/song-of-the-day"},
-		# 	{:name => "Song 3", :artist => "Artist 3", :url => "http://facebook.com"},
-		# 	{:name => "Song 4", :artist => "Artist 4", :url => "https://www.randomlists.com/random-songs"},
-		# ]
-
 		# passing list of hashes to the song class to initialize a new instance for each hash
 		TodaysSongs::Song.create_from_array(songs)
 		# getting all song instances
