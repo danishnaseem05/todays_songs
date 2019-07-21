@@ -8,7 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Danish Naseem"]
   spec.email         = ["danishnaseem05@gmail.com"]
 
-  spec.summary       = %q{Uses nokogiri to scrape song data from two different websites, makes songs, displays them to the user, and asks which one they'd want to hear, which then open the song's webpage.}
+  spec.summary       = %q{Delivering users with top new songs each day}
+  spec.description   = %q{Uses nokogiri to scrape song data from two different websites, makes songs, displays them to the user, and asks which one they'd want to hear, which then open the song's webpage.}
   spec.homepage      = "https://github.com/danishnaseem05/todays_songs.git"
   spec.license       = "MIT"
 
