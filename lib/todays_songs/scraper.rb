@@ -66,6 +66,4 @@ class TodaysSongs::Scraper
         {:name => stripped_arr[1], :artist => stripped_arr[0]}
     end
     
-
-
 end
