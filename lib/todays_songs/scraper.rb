@@ -36,7 +36,7 @@ class TodaysSongs::Scraper
     def self.create_from_youtubetopmusic(url)
         # songs: html.css("h3") # range: [5] - [11]
         # name+artist: song[range].children.text.split(/[()-]/) #=> ["Marshmello & Kane Brown ", " One Thing Right ", "Official Music Video", " ", " Duration: 3:24."]
-        # iterate through above return value, and strip each one. 
+        # iterate through above return value, and strip each one, then create hash {:name, :artist}
         # url: "http://youtube.com" + song[range].children.css("a").attribute("href").value
 
 
