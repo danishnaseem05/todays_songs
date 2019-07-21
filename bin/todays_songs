@@ -29,12 +29,10 @@ require 'pry'
 ## Scraper Class ##
 
 #url1 = "https://www.thecurrent.org/collection/song-of-the-day"
-url2 = "https://www.jazziz.com/category/song-of-the-day/"
-#url3 = "https://www.randomlists.com/random-songs"
+url2 = "https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbVBud2pLbmNhZUp3MDYzZlU1M3Q0cA%3D%3D"
 
 #TodaysSongs::Scraper.create_from_thecurrent(url1)
-TodaysSongs::Scraper.create_from_jazziz(url2)
-#TodaysSongs::Scraper.create_from_randomlists(url3)
+TodaysSongs::Scraper.create_from_youtubetopmusic(url2)
 
 ###################
 

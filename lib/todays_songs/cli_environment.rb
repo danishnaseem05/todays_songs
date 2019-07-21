@@ -72,8 +72,7 @@ class TodaysSongs::CLIEnvironment
 
 	def create_songs
 
-		# - https://www.thecurrent.org/collection/song-of-the-day
-		# - https://www.jazziz.com/category/song-of-the-day/
+		# - https://www.thecurrent.org/collection/song-of-the-daysong-of-the-day/
 		# - https://www.randomlists.com/random-songs
 		
 		# passes above links to Scraper class, gets a list of hashes in return
@@ -83,7 +82,7 @@ class TodaysSongs::CLIEnvironment
 		songs  = [
 			{:name => "Song 1", :artist => "Artist 1", :url => "http://youtube.com"},
 			{:name => "Song 2", :artist => "Artist 2", :url => "https://www.thecurrent.org/collection/song-of-the-day"},
-			{:name => "Song 3", :artist => "Artist 3", :url => "https://www.jazziz.com/category/song-of-the-day/"},
+			{:name => "Song 3", :artist => "Artist 3", :url => "http://facebook.com"},
 			{:name => "Song 4", :artist => "Artist 4", :url => "https://www.randomlists.com/random-songs"},
 		]
 

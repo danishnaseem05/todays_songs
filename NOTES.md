@@ -20,8 +20,7 @@ Project's about Songs of the Day
 from following links:
 
 - <https://www.thecurrent.org/collection/song-of-the-day>
-- <https://www.jazziz.com/category/song-of-the-day/>
-- <https://www.randomlists.com/random-songs>
+- <https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbVBud2pLbmNhZUp3MDYzZlU1M3Q0cA%3D%3D>
 
 program starts when user types in `./bin/todays_songs` in the terminal [*for now*]
 
@@ -75,9 +74,7 @@ program starts when user types in `./bin/todays_songs` in the terminal [*for now
 ## Scraper Class
 
 - `.create_from_thecurrent`: takes in the url: <https://www.thecurrent.org/collection/song-of-the-day> returns json format datatype listing song names, artist names, and urls.
-- `.create_from_jazziz`: takes in the url: <https://www.jazziz.com/category/song-of-the-day/> returns json format datatype listing song names, artist names, and urls.
-- `.create_from_randomlists`: takes in the url: <https://www.randomlists.com/random-songs> returns json format datatype listing song names, artist names, and urls.
-- `@@all`: class array stores the json format datatype returned by the above three methods
+- `.create_from_youtubetopmusic`: takes in the url: <https://www.youtube.com/feed/trending?bp=4gIuCggvbS8wNHJsZhIiUExGZ3F1TG5MNTlhbVBud2pLbmNhZUp3MDYzZlU1M3Q0cA%3D%3D> returns json format datatype listing song names, artist names, and urls.
+- `@@all`: class array stores the json format datatype returned by the above two methods
 - `.all`: returns the @@all array flatten.
 - `.save`: takes in the json format datatype and stores it in the @@all array.
-  

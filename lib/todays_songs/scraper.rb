@@ -29,25 +29,44 @@ class TodaysSongs::Scraper
             :artist => song.text.split(" - ")[0],
             :url => song.attribute("href").value}
         end
-        self.save(result)    
-        binding.pry    
+        self.save(result)       
     end
 
-    def self.create_from_jazziz(url)
+    def self.create_from_youtubetopmusic(url)
+        # songs: html.css("h3") # range should be: [4] - [31]
+        # name+artist: song[4].children.text.split(/[()-]/) #=> ["Marshmello & Kane Brown ", " One Thing Right ", "Official Music Video", " ", " Duration: 3:24."]
+        # iterate through above return value, and strip each one. 
+        # url: "http://youtube.com" + song[4].children.css("a").attribute("href").value
+
+
         result = []
         html = Nokogiri::HTML(open(url))
+        songs = html.css("h3")
+
+        counter = 5
+        while counter < 11 
+            hash = self.name_and_artist(songs[counter].children.text.split(/[()-]/))
+            binding.pry
+            url = "http://youtube.com" + songs[counter].children.css("a").attribute("href").value
+
+            hash[:url] = url
+
+            result << hash
+            counter += 1
+            binding.pry
+        end
+        self.save(result)
         binding.pry
-
-
-        self.save(result)
     end
 
-    def self.create_from_randomlists(url)
-        result = []
-        html = Nokogiri::HTML(open(url))
-
-
-        self.save(result)
+    def self.name_and_artist(array)
+        stripped_arr = []
+        array.each do |element|
+            stripped_arr << element.strip
+        end
+        {:name => stripped_arr[1], :artist => stripped_arr[0]}
     end
+    
+
 
 end
