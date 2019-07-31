@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require "./lib/todays_songs"
+require "../lib/todays_songs.rb"
 
 #################### TESTING ####################
 require 'pry'
